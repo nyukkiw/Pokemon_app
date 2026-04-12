@@ -3,6 +3,7 @@ import 'package:pokemon_android/src/pokemon.dart';
 
 void main() {
   // runApp(const MyApp());
+  print("contoh print sesuatu");
   runApp(const MyAppNew());
 }
 
