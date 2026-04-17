@@ -30,6 +30,9 @@ Pokemon({super.key});
       appBar: AppBar(
         title: Text("My pokemon app"),
       ),
+      // body: Container(
+      //   child: Image.asset("Images/zubat.png")
+      // ),
       body: ListView.builder(
         itemCount: listPokemon.length,
         itemBuilder: (context, index) {
