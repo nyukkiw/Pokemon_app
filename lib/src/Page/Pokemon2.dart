@@ -8,7 +8,7 @@ class Pokemon2 extends StatelessWidget {
   final List<PokemonModel> listPokemon = [
     PokemonModel("bullbasaur", "Images/bullbasaur.png"),
     PokemonModel("charmander", "Images/charmander.png"),
-    PokemonModel("pikhacu", "Images/pikhacu.png"),
+    PokemonModel("pikhacu", "Images/pikachu.png"),
     PokemonModel("pokeball", "Images/pokeball.png"),
     PokemonModel("zubat", "Images/zubat.png"),
   ];
@@ -19,17 +19,23 @@ class Pokemon2 extends StatelessWidget {
       appBar: AppBar(
         title: Text("My pokemon app"),
       ),
-      // body: Container(
-      //   child: Image.asset("Images/zubat.png")
-      // ),
       body: ListView.builder(
         itemCount: listPokemon.length,
         itemBuilder: (context, index) {
           return Container(
             padding: EdgeInsets.all(10),
-            child: Text(
-              listPokemon[index].name,
-              style: TextStyle(fontSize: 20),
+            child: Row(
+              children: [
+                Container(
+                  width: 100,
+                    padding: EdgeInsets.only(right: 20),
+                    child: Image.asset(listPokemon[index].image),
+                      ),
+                Text(
+                    listPokemon[index].name,
+                    style: TextStyle(fontSize: 20),
+                ),
+              ],
             ),
           );
         },
